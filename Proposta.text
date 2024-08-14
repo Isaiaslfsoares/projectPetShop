@@ -9,15 +9,15 @@
 
 ## Cadastro e Edição de cachorros
  -- Deve-se cadastrar cachorros através de uma página
- -- Nome Tutor Cachorro 
- -- Telefone Tutor
- -- Pode perfume
- -- Nome cachorro
+ -- Nome Tutor Cachorro ok
+ -- Telefone Tutor ok
+ -- Pode perfume ok
+ -- Nome cachorro ok
  -- Uma lista de raças permitidas ( Raça ) 
  -- Imagem (buscar imagem de acordo com a raça) 
- -- Idade - (data nascimento)
- -- Apelido
- -- Porte (pequeno, medio, grande)
+ -- Idade - (data nascimento) ok
+ -- Apelido ok
+ -- Porte (pequeno, medio, grande) ok
  -- Tipo pelagem (Curto, Longo)
  -- observação.
 
