@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     const apiUrl = 'https://dog.ceo/api/breeds/list/all';
 
@@ -47,28 +48,43 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     
-    document.getElementById('registerButton').addEventListener('click', () => {
+    document.getElementById('registerButton').addEventListener('click', (event) => {
+        event.preventDefault();
+
+        const tutorName = document.getElementById('tutorName').value.trim();
+        const contactPhone = document.getElementById('contactPhone').value.trim();
+        const dogName = document.getElementById('dogName').value.trim();
+        const dogBreed = document.getElementById('dogBreed').value;
+        const dogBirthDate = document.getElementById('dogBirthDate').value;
+        const dogSize = document.getElementById('dogSize').value;
+        const dogFur = document.getElementById('dogFur').value;
+
+        if (!tutorName || !contactPhone || !dogName || !dogBreed || !dogBirthDate || !dogSize || !dogFur) {
+            alert('Por favor, preencha todos os campos obrigatórios.');
+            return;
+        }
+
         const dogData = {
-            tutorName: document.getElementById('tutorName').value,
-            contactPhone: document.getElementById('contactPhone').value,
-            dogName: document.getElementById('dogName').value,
-            dogNickname: document.getElementById('dogNickname').value,
-            dogAllergies: document.getElementById('dogAllergies').value,
-            dogBreed: document.getElementById('dogBreed').value,
-            dogBirthDate: document.getElementById('dogBirthDate').value,
-            dogSize: document.getElementById('dogSize').value,
-            dogFur: document.getElementById('dogFur').value,
-            dogObservations: document.getElementById('dogObservations').value,
+            tutorName: tutorName,
+            contactPhone: contactPhone,
+            dogName: dogName,
+            dogNickname: document.getElementById('dogNickname').value.trim(),
+            dogAllergies: document.getElementById('dogAllergies').value.trim(),
+            dogBreed: dogBreed,
+            dogBirthDate: dogBirthDate,
+            dogSize: dogSize,
+            dogFur: dogFur,
+            dogObservations: document.getElementById('dogObservations').value.trim(),
             breedImageUrl: selectedBreedImageUrl
         };
 
+        salvarPet(dogData);
         
-        let storedDogs = JSON.parse(localStorage.getItem('dogs')) || [];
-        storedDogs.push(dogData);
-        localStorage.setItem('dogs', JSON.stringify(storedDogs));
-
         console.log("Cachorro registrado:", dogData);
         alert(`Cachorro ${dogData.dogName} registrado com sucesso!`);
+
+        document.querySelector('form').reset();
+        document.getElementById('breedImage').src = ''; 
     });
 
     fetchBreeds();
