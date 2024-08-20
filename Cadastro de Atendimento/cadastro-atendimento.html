@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PETZSHOP - Cadastrar Atendimento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="/imagens/PetFeliz1.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <div class="d-flex" id="wrapper">
+        <div class="sidebar" id="sidebar-wrapper">
+            <div class="sidebar-header">
+                <i class="bi bi-paw-fill"></i>
+                <h3>PETZSHOP</h3>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item">
+                    <a href="/Pagina Principal/index.html" class="sidebar-link">
+                        <i class="bi bi-house-door"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="/Cadastro de Cachorro/cadastrar-cachorro.html" class="sidebar-link">
+                        <i class="bi bi-plus-circle"></i>
+                        <span>Novo Pet</span>
+                    </a>
+                </li>
+                <li class="sidebar-item active">
+                    <a href="/Cadastro de Atendimento/cadastro-atendimento.html" class="sidebar-link">
+                        <i class="bi bi-calendar-plus"></i>
+                        <span>Novo Atendimento</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="/Listagem de cachorros/listagem-cachorro.html" class="sidebar-link">
+                        <i class="bi bi-list-ul"></i>
+                        <span>PETS</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="/Listagem de Atendimentos/listagemAtendimento.html" class="sidebar-link">
+                        <i class="bi bi-calendar-check"></i>
+                        <span>Atendimentos</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-list primary-text fs-4 me-3" id="menu-toggle"></i>
+                    <h2 class="fs-2 m-0">Cadastrar Atendimento</h2>
+                </div>
+            </nav>
+            <div class="container-fluid px-4">
+                <form id="atendimentoForm">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="form-floating">
+                                <select class="form-select" id="selectCachorro">
+                                    <option selected>Selecionar Cachorro</option>
+                                </select>
+                                <label for="selectCachorro">Escolha um cachorro</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="form-floating">
+                                <input type="datetime-local" class="form-control" id="horarioAtendimento">
+                                <label for="horarioAtendimento">Horário de Atendimento</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <h5>Tipo de Serviço</h5>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="servicoBanho" value="Banho">
+                                <label class="form-check-label" for="servicoBanho">Banho</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="servicoTosa" value="Tosa">
+                                <label class="form-check-label" for="servicoTosa">Tosa</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="servicoTosaHigienica"
+                                    value="Tosa Higiênica">
+                                <label class="form-check-label" for="servicoTosaHigienica">Tosa Higiênica</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="servicoCorteUnha"
+                                    value="Corte de Unha">
+                                <label class="form-check-label" for="servicoCorteUnha">Corte de Unha</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="form-floating">
+                                <select class="form-select" id="funcionarioResponsavel">
+                                    <option selected>Funcionário Responsável</option>
+                                    <option value="Isabel">Isabel</option>
+                                    <option value="João">João</option>
+                                    <option value="Lidovaldo">Lidovaldo</option>
+                                    <option value="Leonardo">Leonardo</option>
+                                </select>
+                                <label for="funcionarioResponsavel">Escolha o funcionário</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="form-floating">
+                                <input type="number" class="form-control" id="valorServico" step="0.01">
+                                <label for="valorServico">Valor do Serviço</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3 d-flex align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="atendimentoConcluido">
+                                <label class="form-check-label" for="atendimentoConcluido">Atendimento Concluído</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center mt-4">
+                        <button type="submit" class="btn btn-primary">Cadastrar Atendimento</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-light py-4 text-center">
+        <div class="container">
+            <p class="m-0">© 2024 PETZSHOP. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/Cadastro de Atendimento/cadastro-atendimento.js"></script>
+</body>
+
+</html>

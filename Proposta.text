@@ -6,8 +6,9 @@
  # Usar bootstrap para estilização do projeto
 
  # Precisa ser responsivo
+## Home (Heitor)
 
-## Cadastro e Edição de cachorros
+## Cadastro de cachorros (Isaias)
  -- Deve-se cadastrar cachorros através de uma página
  -- Nome Tutor Cachorro ok
  -- Telefone Tutor ok
@@ -22,7 +23,7 @@
  -- observação.
 
 
- ## Cadastro atendimento
+ ## Cadastro atendimento (Matheus)
  -- Selecionar o cachorro ( cadastrado no sistema)
  -- Horário de atendimento
  -- Tipo de serviço ( Banho, tosa, tosa higiênica, corte de unha)
@@ -31,9 +32,9 @@
  -- Valor serviço
 
 
-## Página de listagem Cachorros
+## Página de listagem e Edição de Cachorros (Lucas)
 -- Mstrar informações de nome do cachorro, nome tutor, raça , idade
 
 
-## Página de listagem de Atendimentos
+## Página de listagem de Atendimentos (Gustavo)
 Horario atendimento, nome cachorro, Serviços, Raça, Foto. atendimento concluído
