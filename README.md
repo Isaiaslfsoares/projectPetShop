@@ -13,15 +13,15 @@ Proposta pelo Professor:
 
 ## Cadastro de cachorros
 - Deve-se cadastrar cachorros através de uma página
-- Nome Tutor Cachorro ok
-- Telefone Tutor ok
-- Pode perfume ok
-- Nome cachorro ok
+- Nome Tutor Cachorro 
+- Telefone Tutor 
+- Pode perfume 
+- Nome cachorro 
 - Uma lista de raças permitidas ( Raça ) 
 - Imagem (buscar imagem de acordo com a raça) 
-- Idade - (data nascimento) ok
-- Apelido ok
-- Porte (pequeno, medio, grande) ok
+- Idade - (data nascimento) 
+- Apelido 
+- Porte (pequeno, medio, grande)
 - Tipo pelagem (Curto, Longo)
 - observação.
 
